@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*---------- Variabels -----------*/
+:root {
+  /* Colors */
+  --green: #2e8b57;
+  --white: #ffffff;
+  --red: #ff0000;
+}
+/* ------- General settings --------*/
+body {
+  background-color: var(--white);
+}
+h1 {
+  color: var(--white);
+  font-family: monospace;
+  font-size: 44px;
+}
+h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 38px;
+  text-decoration: underline;
+}
+input[type="text"] {
+  font-size: 20px;
+}
+/* ------ Input section ----------*/
+.container-input {
+  place-items: center;
+  display: grid;
+  margin-top: 40px;
+  width: 100%;
+  height: 180px;
+  border: solid 1px;
+  background-color: #242424;
+  border-radius: 10px;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+}
+
+.inputField {
+  width: 40%;
+  border-radius: 5px;
+}
+::placeholder {
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.topBtns {
+  border-radius: 50px;
+  border: 3px solid var(--green);
+  color: var(--green);
+  font-size: 20px;
+  transition: all 0.5s;
+  width: 10%;
+}
+
+.topBtns:hover {
+  cursor: pointer;
+  background-color: rgb(96, 247, 161);
+  color: var(--white);
+}
+/*------- Error Message ------*/
+.error {
+  position: absolute;
+  left: 21%;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--red);
+}
+.error-to-do {
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--red);
+}
+.error-finished-list {
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--red);
+}
+/*-------- List section --------*/
+.list-container {
+  width: 100%;
+  height: 800px;
+  border: solid 1px;
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+}
+/*-------- List containers -------*/
+.to-do-container,
+.done-list-container {
+  text-align: center;
+  width: 50%;
+  border: solid 1px;
+  border-radius: 10px;
+}
+/*------ Lists --------*/
+.to-do-list,
+.done-list {
+  width: 100%;
+}
+/*------- Dynamiskt- styling -------*/
+.listItem {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.newInputField {
+  height: 40px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.btn {
+  height: 40px;
+  border-radius: 50px;
+  border: 3px solid var(--green);
+  color: var(--green);
+  transition: all 0.5s;
+  width: 80px;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(96, 247, 161);
+  color: var(--white);
+}
+/* ------ Media Queries --------- */
+@media screen and (max-width: 990px) {
+  .topBtns {
+    font-size: 16px;
+    width: 12%;
+  }
+  .newInputField {
+    height: 30px;
+    width: 35%;
+  }
+  .btn {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topBtns {
+    font-size: 14px;
+    width: 14%;
+  }
+  .btn {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  h1 {
+    font-size: 30px;
+  }
+  .input {
+    height: 30px;
+  }
+  .newInputField {
+    height: 25px;
+  }
+  .btn {
+    height: 25px;
+  }
+}
+@media screen and (max-width: 546px) {
+  .topBtns {
+    width: 15%;
+  }
+  .newInputField {
+    width: 100%;
+  }
+  .btn {
+    width: 30%;
+  }
+
+  @media screen and (max-width: 435px) {
+    h1 {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 25px;
+    }
+    .input {
+      height: 25px;
+    }
+    .error {
+      font-size: 16px;
+    }
+    .topBtns {
+      font-size: 12px;
+      width: 17%;
+    }
+    .error-to-do,
+    .error-finished-list {
+      font-size: 14px;
+    }
+    .btn {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
+  ::placeholder {
+    font-size: 15px;
+  }
+  .error-finished-list,
+  .error-to-do {
+    font-size: 10px;
+  }
+  .btn {
+    font-size: 10px;
+    height: 20px;
+  }
+  .newInputField {
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  h1 {
+    font-size: 18px;
+  }
+  .topBtns {
+    font-size: 10px;
+    border: solid 1px;
+  }
+  .btn {
+    border: solid 1px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  h1 {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  .error {
+    font-size: 10px;
+  }
+}

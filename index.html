@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Att Göra Lista</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Input Section -->
+    <div class="container-input">
+      <h1>Christoffers Att-Göra-App</h1>
+      <span class="error"></span>
+      <div class="input">
+        <input class="inputField" type="text" placeholder="Din syssla.." />
+        <button class="addItem topBtns">Lägg till</button>
+        <button class="refresh topBtns">Återställ</button>
+      </div>
+    </div>
+    <!-- List section -->
+    <div class="list-container">
+      <!--  Att göra Lista-->
+      <div class="to-do-container">
+        <h2>Att Göra</h2>
+        <span class="error-to-do"></span>
+        <div class="to-do-list">
+          <ul></ul>
+        </div>
+      </div>
+      <!-- Färdig Lista-->
+      <div class="done-list-container">
+        <h2>Färdiga</h2>
+        <span class="error-finished-list"></span>
+        <div class="done-list">
+          <ul></ul>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
